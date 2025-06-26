@@ -1,9 +1,9 @@
 const fs = require("fs");
 module.exports.config = {
-  name: "lund",
+  name: "abuse",
     version: "1.1.1",
   hasPermssion: 0,
-  credits: "SHANKAR SUMAN", 
+  credits: "Zaira Arsalan", 
   description: "Just Respond",
   commandCategory: "no prefix",
     cooldowns: 5, 
@@ -12,15 +12,15 @@ module.exports.config = {
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
   let react = event.body.toLowerCase();
-  if(react.includes("lund") ||
-     react.includes("LUND") || react.includes("LND") || react.includes("lnd") ||
-react.includes("laude") ||
-react.includes("loda")) {
+  if(react.includes("bot tmkc, tmkc") ||
+     react.includes("bot bkl, bkl") || react.includes("LND") || react.includes("lnd") ||
+react.includes("bot bsdk, bsdk") ||
+react.includes("bot ki mkc, mkc")) {
     var msg = {
-        body: `लोहे का लन्ड है मेरा निकल के हाथ में दे दूंगा।😐😒👈`,
+        body: `𝗝𝗮 𝗻𝗮 𝗹𝘂𝗻𝗱 𝗸𝗶 𝘀𝗵𝗮𝗸𝗮𝗹 𝗸𝗲 𝗰𝗵𝘂𝘁𝘆𝗲🌝`,
       }
       api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("😆", event.messageID, (err) => {}, true)
+    api.setMessageReaction("🖕🏻", event.messageID, (err) => {}, true)
     }
   }
   module.exports.run = function({ api, event, client, __GLOBAL }) {
