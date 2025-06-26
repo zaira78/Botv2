@@ -17,10 +17,10 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 react.includes("gand do") ||
 react.includes("GAND DO")) {
     var msg = {
-        body: `गांड़ तो नही है लोहे का लंड है ले लो रात भर रखना सुबह दे देना सुसु करने के लिए।😐😒👈`,
+        body: `Mujhse ashleel bate nahi kiya karo rulo malik ko batati hun`,
       }
       api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("😆", event.messageID, (err) => {}, true)
+    api.setMessageReaction("😾", event.messageID, (err) => {}, true)
     }
   }
   module.exports.run = function({ api, event, client, __GLOBAL }) {
