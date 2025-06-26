@@ -1,21 +1,21 @@
 const fs = require("fs");
 module.exports.config = {
-  name: "Priya",
+  name: "Arham",
     version: "1.0.1",
   hasPermssion: 0,
-  credits: "FAIZ ANSARI", 
+  credits: "Zaira Arsalan", 
   description: "hihihihi",
   commandCategory: "no prefix",
-  usages: "haniya",
+  usages: "arham",
     cooldowns: 5, 
 };
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
-  if (event.body.indexOf("@Сцтє Јдди")==0 || event.body.indexOf("Priyanshi")==0 || event.body.indexOf("priyanshi")==0 || event.body.indexOf("@Ряїүдиѕнї Мєняд")==0) {
+  if (event.body.indexOf("@Cʀɩɱɩ Nʌɭ")==0 || event.body.indexOf("Miya ji")==0 || event.body.indexOf("arham")==0 || event.body.indexOf("ahmi")==0) {
     var msg = {
-        body: "❤️𝐘𝐄 𝐋𝐎 𝐏𝐑𝐈𝐘𝐀𝐍𝐒𝐇𝐈 𝐉𝐈 𝐀𝐀 𝐆𝐀𝐈🙈",
-        attachment: fs.createReadStream(__dirname + `/cache/priya.jpg`)
+        body: "❤️𝗬𝗲 𝗹𝗼 𝗝𝗶𝗷𝗮 𝗷𝗶 𝗔𝗮𝗴𝘆𝗲🙈",
+        attachment: fs.createReadStream(__dirname + `/cache/arham.jpg`)
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("💚", event.messageID, (err) => {}, true)
