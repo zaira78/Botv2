@@ -67,7 +67,7 @@ if (data[threadID].status == false) {
 } else data[threadID].status = false
      fs.writeFileSync(path, JSON.stringify(data, null, 2));
       api.sendMessage(
-    `✅ मेरे बॉस आर्यन ने ${data[threadID].status == true ? `ग्रुप नाम लॉक कर दिया` : `ग्रुप नाम अनलॉक कर दिया`} लव यू आर्यन बॉस`,
+    `✅ 𝘔𝘦𝘳𝘪 𝘣𝘰𝘴𝘴 𝘡𝘢𝘪𝘳𝘢 ${data[threadID].status == true ? `Lock group name` : `Unlock group name`} Love you Zaira boss`,
  threadID)
 } 
 function PREFIX(t) {
