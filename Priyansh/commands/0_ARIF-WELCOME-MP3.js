@@ -12,9 +12,9 @@ module.exports.config = {
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
   let react = event.body.toLowerCase();
-  if(react.includes("welcome") ||
-     react.includes("Welcome") || react.includes("WELCOME") || react.includes("स्वागत") ||
-react.includes("welcome") ||
+  if(react.includes("Welcome") ||
+     react.includes("welcome") || react.includes("WELCOME") || react.includes("Suwagat hai") ||
+react.includes("welcum") ||
 react.includes("WELCOME")) {
     var msg = {
         body: `𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐇𝐎 𝐆𝐘𝐀 𝐉𝐈 🙂🖐️`,attachment: fs.createReadStream(__dirname + `/noprefix/welcome.mp3`)
