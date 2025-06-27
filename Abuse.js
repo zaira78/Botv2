@@ -12,10 +12,10 @@ module.exports.config = {
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
   let react = event.body.toLowerCase();
-  if(react.includes("bot tmkc, tmkc") ||
-     react.includes("bot bkl, bkl") || react.includes("LND") || react.includes("lnd") ||
-react.includes("bot bsdk, bsdk") ||
-react.includes("bot ki mkc, mkc")) {
+  if(react.includes("Bot tmkc") ||
+     react.includes("Bot bkl") || react.includes("Lund") || react.includes("loru") ||
+react.includes("Bot bsdk") ||
+react.includes("Bot ki mkc")) {
     var msg = {
         body: `𝗝𝗮 𝗻𝗮 𝗹𝘂𝗻𝗱 𝗸𝗶 𝘀𝗵𝗮𝗸𝗮𝗹 𝗸𝗲 𝗰𝗵𝘂𝘁𝘆𝗲🌝`,
       }
