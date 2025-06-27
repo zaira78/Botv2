@@ -22,25 +22,23 @@ const time = process.uptime(),
 		minutes = Math.floor((time % (60 * 60)) / 60),
 		seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
-var juswa = moment.tz("Asia/Dhaka").format("『D/MM/YYYY』 【HH:mm:ss】");
+var juswa = moment.tz("Asia/Islamabad").format("『D/MM/YYYY』 【HH:mm:ss】");
 var link =                                     
 ["https://imgur.com/a/FXhpXW0"];
 var callback = () => api.sendMessage({body:` ╾━╤デ╦︻(▀̿Ĺ̯▀̿ ̿) 𝐀𝐃𝐌𝐈𝐍 𝐀𝐍𝐃 𝐁𝐎𝐓 𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 
 (⌐▀͡ ̯ʖ▀)︻̷┻̿═━一-
 
-☄️Bot Name︎︎︎☄️  ${global.config.BOTNAME}
+☄️𝘼⃝𝙥𝙠𝙞◉𝙇𝙖𝙞⃟𝙡𝙖☄️  ${global.config.BOTNAME}
 
-🔥Bot Admin🔥ཫ༄𒁍⃝𝐌𝐀𝐑⃟𝐈𝐍𝐀︎︎︎☜︎︎︎✰🥀
+🔥Bot Admin🔥 🌸𝆺𝅥⃝𝗭𝗔𝗜𝗥⃟𝗔🌸
 
-🙈bot andmin owner facebook id link🙈➪ https://www.facebook 💞🕊️
-
-👋For Any Kind Of Help Contact On Telegram  Username 👉 ⃝𝐌𝐀𝐑⃟𝐈𝐍𝐀😇
+🙈bot andmin owner facebook id link🙈➪ https://www.facebook.com/callmebebo77💞🕊️ 
 
 ✧══════•❁❀❁•══════✧
 
-🌸Bot Prefix🌸☞︎︎︎☜︎︎︎✰ ${global.config.PREFIX}
+🌸Bot Prefix🌸☞︎︎︎.☜︎︎︎✰ ${global.config.PREFIX}
 
-♥️Bot Owner♥️ ☞︎︎︎⃝𝐌𝐀𝐑⃟𝐈𝐍𝐀☜︎︎︎✰ 
+♥️Bot Owner♥️ ☞︎︎︎𝆺𝅥⃝𝗭𝗔𝗜𝗥⃟𝗔☜︎︎︎✰ 
 
 🥳UPTIME🥳
 
