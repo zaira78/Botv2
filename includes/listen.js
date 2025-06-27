@@ -6,12 +6,12 @@ module.exports = function ({ api, models }) {
     const logger = require("../utils/log.js");
     const moment = require('moment-timezone');
     const axios = require("axios");
-    var day = moment.tz("Asia/Kolkata").day();
+    var day = moment.tz("Asia/Islamabad").day();
 
 
     const checkttDataPath = __dirname + '/../Priyansh/commands/checktuongtac/';
     setInterval(async () => {
-        const day_now = moment.tz("Asia/Kolkata").day();
+        const day_now = moment.tz("Asia/Islamabad").day();
         const _ADMINIDs = [...global.config.NDH, ...global.config.ADMINBOT];
       try {
         if (day != day_now) {
@@ -41,7 +41,7 @@ module.exports = function ({ api, models }) {
                             return a.name.localeCompare(b.name);
                         }
                     });
-                    let checkttBody = '==PRIYANSH RAJPUT ❤️==\n\n';
+                    let checkttBody = '==Zaira Arsalan ❤️==\n\n';
                     checkttBody += storage.slice(0, 10).map(item => {
                         return `${count++}. ${item.name} with ${item.count} message`;
                     }).join('\n');
@@ -63,7 +63,7 @@ module.exports = function ({ api, models }) {
                         const checktt = JSON.parse(fs.readFileSync(checkttDataPath + checkttFile));
                         let storage = [], count = 1;
                         for (const item of checktt.week) {
-                            const userName = await Users.getNameUser(item.id) || 'Priyansh Hun Yar';
+                            const userName = await Users.getNameUser(item.id) || 'Zaira Hun Yar';
                             const itemToPush = item;
                             itemToPush.name = userName;
                             storage.push(itemToPush);
@@ -78,7 +78,7 @@ module.exports = function ({ api, models }) {
                                 return a.name.localeCompare(b.name);
                             }
                         });
-                        let checkttBody = '==PRIYANSH RAJPUT ❤️==\n\n';
+                        let checkttBody = '==Zaira Arsalan ❤️==\n\n';
                         checkttBody += storage.slice(0, 10).map(item => {
                             return `${count++}. ${item.name} with ${item.count} message`;
                         }).join('\n');
