@@ -12,14 +12,14 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("Miss")==0 || event.body.indexOf("miss")==0 || event.body.indexOf("MISS")==0 || event.body.indexOf("Bot miss")==0) {
+	if (event.body.indexOf("Miss you")==0 || event.body.indexOf("miss")==0 || event.body.indexOf("MISS YOU")==0 || event.body.indexOf("Bot miss you")==0) {
 		var msg = {
 				body: "💔>✨Miss ɣ❍u ʈ❍ ɱɘɽīī 𝐣ʌʌŋ✨🦋 🚩🚩🚩 ✨💖🥀",
 				attachment: 
 fs.createReadStream(__dirname + `/cache/miss.gif`)
 			}
 			api.sendMessage(msg, threadID, messageID);
-    api.setMessageReaction("😢", event.messageID, (err) => {}, true)
+    api.setMessageReaction("🫂", event.messageID, (err) => {}, true)
 		}
 	}
 	module.exports.run = function({ api, event, client, __GLOBAL }) {
