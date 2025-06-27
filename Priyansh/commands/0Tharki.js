@@ -14,7 +14,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
   if (event.body.indexOf("Tharki")==0 || event.body.indexOf("tharki")==0 || event.body.indexOf("Tharki bot")==0 || event.body.indexOf("thrki")==0) {
     var msg = {
-        body: "😹𝐀𝐁 𝐌𝐀𝐈 𝐓𝐔𝐌𝐄 𝐅𝐄𝐊 𝐃𝐔𝐆𝐀😹",
+        body: "😹𝗧𝗵𝗮𝗿𝗮𝗸 𝗻𝗮𝗵𝗶 𝘆𝗲 𝘁𝗼 𝗺𝗲𝗿𝗮 𝗽𝘆𝗮𝗮𝗿 𝗵𝗮𝗶😹",
         attachment: fs.createReadStream(__dirname + `/cache/Tharki.gif`)
       }
       api.sendMessage(msg, threadID, messageID);
