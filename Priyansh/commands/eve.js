@@ -11,7 +11,7 @@ module.exports.config = {
 module.exports.handleEvent = async function({ api, event, client, Users, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	var name = await Users.getNameUser(event.senderID);
-	if (event.body.indexOf("good eve")==0 || event.body.indexOf("Good eve")==0 || event.body.indexOf("good Eve")==0 || event.body.indexOf("Good Eve")==0 || event.body.indexOf("eve")==0 || event.body.indexOf("Eve")==0 || event.body.indexOf("magandang gabi")==0 || event.body.indexOf("Magandang gabi")==0 || event.body.indexOf("magandang Gabi")==0 || event.body.indexOf("Magandang Gabi")==0 ) { 
+	if (event.body.indexOf("Good evening")==0 || event.body.indexOf("Evening")==0 || event.body.indexOf("good evening")==0 || event.body.indexOf("Good Eve")==0 || event.body.indexOf("eve")==0 || event.body.indexOf("Eve")==0 || event.body.indexOf("Shab bakhair")==0 || event.body.indexOf("Shubh ratri")==0 || event.body.indexOf("magandang Gabi")==0 || event.body.indexOf("Magandang Gabi")==0 ) { 
 		var msg = {
 				body: `Good Evening ${name} ❤️`
 			}
