@@ -22,7 +22,7 @@ module.exports.run = async function ({ event, args, api }) {
   var nam1 = parseInt(cc[2]);
   if (!nam1) return api.sendMessage("Invalid year of birth!",event.threadID,event.messageID);
   const moment = require("moment-timezone");
-  var hientai = moment.tz("Asia/Kolkata").format("DD/MM/YYYY HH:mm:ss");
+  var hientai = moment.tz("Asia/Islamabad").format("DD/MM/YYYY HH:mm:ss");
   var concac = `${hientai}`;
   var djtme = concac.split(" ");
   var dm = djtme[0].split("/");
