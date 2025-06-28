@@ -12,10 +12,9 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("Tofee")==0 || event.body.indexOf("TOFEE")==0 || event.body.indexOf("tofee")==0 || event.body.indexOf("Tofi")==0) {
+	if (event.body.indexOf("Toffee")==0 || event.body.indexOf("TOFFEE")==0 || event.body.indexOf("tafi")==0 || event.body.indexOf("Tofi")==0) {
 		var msg = {
-				body: "💝 YE LO BBY TOFEE KHO 🍬\n\n(-𝐌𝐚𝐝𝐞 𝐁𝐲 ཫ༄𒁍⃝𝐌𝐀𝐑⃟𝐈𝐍𝐀❤️-)",
-				attachment: 
+				body: "💝 YE LO BBY TOFEE KHO 🍬\n attachment: 
 fs.createReadStream(__dirname + `/cache/Tofee.jpg`)
 			}
 			api.sendMessage(msg, threadID, messageID);
