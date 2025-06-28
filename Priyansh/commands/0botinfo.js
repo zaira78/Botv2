@@ -22,7 +22,7 @@ const time = process.uptime(),
 		minutes = Math.floor((time % (60 * 60)) / 60),
 		seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
-var juswa = moment.tz("Asia/Islamabad").format("『D/MM/YYYY』 【HH:mm:ss】");
+var juswa = moment.tz("Asia/Kolkata").format("『D/MM/YYYY』 【HH:mm:ss】");
 var link =                                     
 [""];
 var callback = () => api.sendMessage({body:`===🦋⃝🐼◉⚡Thɛ͓̽'ʬ 𝆺𝅥⃝𝗭𝗔𝗜𝗥⃟𝗔🐥⚡◉🪽'𝙎 𝘽𝙊𝙏===\n\n☄️𝘼⃝𝙥𝙠𝙞◉𝙇𝙖𝙞⃟𝙡𝙖☄️ »» ${global.config.BOTNAME}\n🌸𝙋𝙍𝙀𝙁𝙄𝙓🌸  »» ${global.config.PREFIX} ««\n\n🥳𝙐𝙋𝙏𝙄𝙈𝙀🥳\n\n𝑫𝑨𝑻𝑬 𝑨𝑵𝑫 𝑻𝑰𝑴𝑬 \n${juswa}\n\n⚡𝘽𝙊𝙏 𝙄𝙎 𝙍𝙐𝙉𝙉𝙄𝙉𝙂⚡ \n🕛${hours}:${minutes}:${seconds}🕧.
