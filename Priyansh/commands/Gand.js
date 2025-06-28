@@ -13,11 +13,11 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
   let react = event.body.toLowerCase();
   if(react.includes("gand de") ||
-     react.includes("GAND DE") || react.includes("GND DO") || react.includes("Gand de") ||
+     react.includes("Gand mara") || react.includes("GND DO") || react.includes("Gand de") ||
 react.includes("gand do") ||
 react.includes("GAND DO")) {
     var msg = {
-        body: `Mujhse ashleel bate nahi kiya karo rulo malik ko batati hun`,
+        body: `Mujhse ashleel bate nahi kiya karo ruku boss ko batati hun😾😾`,
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("😾", event.messageID, (err) => {}, true)
