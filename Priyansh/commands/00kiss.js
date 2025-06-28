@@ -12,7 +12,7 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("😘😘")==0 || event.body.indexOf("💋💋")==0 || event.body.indexOf("kiss")==0 || event.body.indexOf("Kiss")==0) {
+	if (event.body.indexOf("😘")==0 || event.body.indexOf("💋")==0 || event.body.indexOf("kiss")==0 || event.body.indexOf("Kiss")==0) {
 		var msg = {
 				body: "😘💋𝐘𝐄 𝐋𝐎 𝐁𝐀𝐁𝐘 𝐊𝐈𝐒𝐒💋😘",
 				attachment: 
