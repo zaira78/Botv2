@@ -23,7 +23,7 @@ const time = process.uptime(),
 	minutes = Math.floor((time % (60 * 60)) / 60),
 	seconds = Math.floor(time % 60);
 const moment = require("moment-timezone");
-var juswa = moment.tz("Asia/Islamabad").format("『D/MM/YYYY』 【HH:mm:ss】");
+var juswa = moment.tz("Asia/Kolkata").format("『D/MM/YYYY』 【HH:mm:ss】");
 var link =[
 "https://i.imgur.com/DDO686J.mp4",
 "https://i.imgur.com/WWGiRvB.mp4",
