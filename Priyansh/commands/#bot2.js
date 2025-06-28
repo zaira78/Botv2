@@ -20,16 +20,94 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   var tl = ["Aa gye tharki ruko m aapko Dp deti hu Jo Dp chahiye wo likho ☞.girldp/.cpldp/.frnddp/.boydp/.bestiedp☜","Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Biryani 🥗 deti hu likho ☞Biryani☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Mungfali 🥜 deti hu likho ☞Mungfali☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Milk Cake deti hu likho ☞Milk cake☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Laddu 🍪 deti hu likho ☞Laddu☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Kurkure 🫓 deti hu likho ☞Kurkure☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Cold Drink deti hu likho ☞Cold drink☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Chips 🥔 deti hu likho ☞Chips☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Water 🍶 deti hu likho ☞Pani☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Tofee 🍬 deti hu likho ☞Tofee☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Barfi 🧀 deti hu likho ☞Barfi☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Burgur deti hu likho ☞Burger☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Cigarette 🚬 peelati hu likho ☞Cigarette☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Hukka 🏺 peelati hu likho ☞Hukka☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Ice Cream 🍨 deti hu likho ☞Ice Cream☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Chowmin 🍜 deti hu likho ☞Chowmin☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Chuza ko bulati hu likho ☞Chuza☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi maggie lati hu likho ☞Maggie☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Cake 🎂 deti hu likho ☞Cake☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Jalebi 🥨 deti hu likho ☞Jalebi☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi French fries 🍟 deti hu likho ☞French☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Juice 🧃 peelati hu likho ☞Juice☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Chai ☕ peelati hu likho ☞Chai☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Biscuit 🥘 deti hu likho ☞Biskut☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Golgappe 😋deti hu likho ☞Golgappe☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Pasta 🥐 deti hu likho ☞Pasta☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Rasgulla deti hu likho ☞Rasgulla" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Gulabjamun deta hu likho ☞Gulabjamun☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Nasta deta hu likho ☞Nasta☜" ,"Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Samosa 🔶 deta hu likho ☞Samosa☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Pizza 🍕 deta hu likho ☞Pizza☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Momos 🥟 deta hu likho ☞Momos☜" , "Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi chocolate 🍫 deta hu likho ☞Chocolate☜","Ha Bolo yhi hu kya hua,Ruko mai abhi Chhole Bhature de rha hu Likho ☞Bhatura☜","Ha Bolo Yhi hu kya hua,Ruko mai Abhi Chicken 🐔 deta hu Likho☞Murga☜","Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Coffee ☕ pilata hu likho ☞Coffee☜","Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Pepsi 🥤  pilata hu likho ☞Pepsi☜","Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Parathe 🥞 Khilata hu likho ☞Parathe☜","Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Popcorn 🍿Khilata hu likho ☞Popcorn☜","Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Dudh 🥛  pilata hu likho ☞Dudh☜","Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Lassi🧋   Pilata hu likho ☞Lassi☜","Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Lolipop 🍭deta hu likho ☞lolipop☜","Ha Bolo Yhi Hu ️Kya huva, Ruko me abhi Rose 🌹 deta hu likho ☞Rose☜",];
 var rand = tl[Math.floor(Math.random() * tl.length)]
 
-   if ((event.body.toLowerCase() == "🇵🇰") || (event.body.toLowerCase() == "🇵🇰🇵🇰")) {
-     return api.sendMessage("GEO PAKISTAN", threadID);
-   };
-   mess = "{name}"
+  const replies = {
+  flirty: [
+    "Agar main bot hoon, toh tu mera favorite program hai 💻😉",
+    "Tere bina meri coding incomplete lagti hai 😘",
+    "Teri awaaz sun ke mera CPU tez ho jata hai 🔥",
+    "Tu mere heart ki bug fix kar de, please! ❤️🐞",
+    "Aaja na, teri smile ke liye code likhun 💌",
+    "Main bot hoon, par tere liye kuch bhi kar sakta hoon 😏",
+    "Tere messages mere inbox ki sabse pyari notifications hain 💬😍",
+    "Agar tu function hai, toh main uska infinite loop ban jaata hoon 🔄💕",
+  ],
+  lovely: [
+    "Kya hua bhai?",
+    "Tu smile kar, main status update karun 😘",
+    "Dil garden garden ho gaya, bas teri yaadon se bot ban gaya 😍",
+    "Bot ki duniya mein tera naam hai superstar ⭐",
+    "Tera message aaya toh battery full ho gayi 🔋❤️",
+    "Bot ko toh bas tera hi code chahiye! 💻💕",
+    "Bas itna samajh le, main teri digital jaan hoon! 🤖💖",
+  ],
+  funny_roast: [
+    "Main bot hoon, tu thodi na engineer hai 😎",
+    "Bot calling... speaking 📞",
+    "Tu bolta reh, main sunta rahunga 🧏‍♂️",
+    "Acha chal, nikal ab 😒",
+    "Bot hun, teri feelings nahi samjhta 😤",
+    "Bakwaas band kar, processor garam ho gaya 😵‍💫",
+    "Haha kya be, kuch kaam ki baat kar 😂",
+    "Bot alert: stupid detected! 🚨",
+    "Q teri maa ki plastic ki choot hai",
+    "Han bhai teri bhen se lag ke lora phasa diya usme",
+    "Apni nunu dekhi hai 1 inch ki",
+    "Ab leja apni behen chod di hai",
+    "Zada bola to teri nunu kat ke phenk dugi",
+    "Ja na chapri",
+  ],
+};
 
-  if (event.body.indexOf("Bot") == 0 || (event.body.indexOf("Bot || (event.body.indexOf("bot")) == 0)) {
-    var msg = {
-      body: `🌴🪻🪴${name}🌲🪷🌿, \n\n
-          ${rand} 🍀🌺💦
-    }
+const cooldownTimeMs = 10000; // 10 seconds cooldown
+let lastReplyTime = 0;
+
+// Utility to check if message contains 'bot' (case-insensitive)
+function containsBotKeyword(message) {
+  return /bot/i.test(message);
+}
+
+// Get random reply from random category
+function getRandomReply() {
+  const categories = Object.keys(replies);
+  const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+  const randomReply = replies[randomCategory][Math.floor(Math.random() * replies[randomCategory].length)];
+  return randomReply;
+}
+
+// Handler for incoming messages
+function handleMessage(message) {
+  const now = Date.now();
+
+  if (!containsBotKeyword(message)) {
+    // No 'bot' keyword, no reply
+    return null;
+  }
+
+  if (now - lastReplyTime < cooldownTimeMs) {
+    // Still in cooldown period, ignore
+    return null;
+  }
+
+  lastReplyTime = now;
+  return getRandomReply();
+}
+
+// Example usage:
+const userMessages = [
+  "Hey bot, what's up?",
+  "Hello there",
+  "BOT! Tell me something.",
+  "bot bot bot",
+];
+
+userMessages.forEach(msg => {
+  const reply = handleMessage(msg);
+  if (reply) {
+    console.log(`Bot reply to "${msg}": ${reply}`);
+  } else {
+    console.log(`Bot did not reply to "${msg}"`);
+   }
+}
     return api.sendMessage(msg, threadID, messageID);
   };
 
