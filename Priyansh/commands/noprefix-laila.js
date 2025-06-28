@@ -12,9 +12,9 @@ module.exports.config = {
 
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
-	if (event.body.indexOf("anaya")==0 || event.body.indexOf("Anaya")==0 || event.body.indexOf("ANAYA")==0 || event.body.indexOf("@Zɩɗɗɩ Qʋɘɘŋ")==0) {
+	if (event.body.indexOf("Moiz")==0 || event.body.indexOf("moiz")==0 || event.body.indexOf("moiz")==0 || event.body.indexOf("@معیز راجپوت")==0) {
 		var msg = {
-				body: "===𝘼𝙉𝘼𝙔𝘼 𝙏𝙃𝘼𝙆𝙐𝙍 𝙈𝙀𝙍𝙄 𝙅𝘼𝘼𝙉 𝙃𝘼𝙄=== 😘❤❤😍",
+				body: "=== 𝙈𝙊𝙄𝙕 𝙏𝙊 𝙈𝙀𝙍𝙄 𝙅𝘼𝘼𝙉 𝙃𝘼𝙄=== 😘❤❤😍",
 				attachment: fs.createReadStream(__dirname + `/noprefix/anaya.jpg`)
 			}
 			api.sendMessage(msg, threadID, messageID);
