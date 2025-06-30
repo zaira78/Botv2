@@ -14,8 +14,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	if (event.body.indexOf("BIRYANI")==0 || event.body.indexOf("Biryani")==0 || event.body.indexOf("biryani")==0 || event.body.indexOf(".biryani")==0) {
 		var msg = {
-				body: "💝 YE LO BBY BIRYANI KHAO 🥗\n\n(-𝐌𝐚𝐝𝐞 𝐁𝐲  𝆺𝅥⃝𝗭𝗔𝗜𝗥⃟𝗔❤️-)",
-				attachment: 
+				body: "💝 YE LO BBY BIRYANI KHAO 🥗\nattachment: 
 fs.createReadStream(__dirname + `/cache/Biryani.jpg`)
 			}
 			api.sendMessage(msg, threadID, messageID);
