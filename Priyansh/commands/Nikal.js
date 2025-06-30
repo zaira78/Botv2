@@ -12,12 +12,12 @@ module.exports.config = {
 module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
   var { threadID, messageID } = event;
   let react = event.body.toLowerCase();
-  if(react.includes("chal nikal") ||
-     react.includes("nikal") || react.includes("Nikal") || react.includes("NIKAL") ||
+  if(react.includes("Chal nikal") ||
+     react.includes("chal nikal") || react.includes("Nikal") || react.includes("NIKAL") ||
 react.includes("niklo") ||
 react.includes("Niklo")) {
     var msg = {
-        body: `चल चल तु निकल यह से मैं क्यूं निकलू कमा के खिलाते हो क्या।😐👈`,
+        body: `Tum niklo me q tumhari bat manu kama ke khilate ho kya? 🧐`,
       }
       api.sendMessage(msg, threadID, messageID);
     api.setMessageReaction("🧐", event.messageID, (err) => {}, true)
