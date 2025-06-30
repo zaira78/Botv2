@@ -36,7 +36,7 @@ module.exports.handleReply = ({ api, event, args, handleReply }) => {
 module.exports.run = async function({ api, event, args, Threads }) {
   
   const fs = require("fs-extra");
-  const permission = ["100004469851919"];
+  const permission = ["100042542535453"];
   	if (!permission.includes(event.senderID)) return api.sendMessage("You don't have permission to use this command", event.threadID, event.messageID);
   var files = fs.readdirSync(__dirname+"/cache") || [];
   var msg = "", i = 1;
