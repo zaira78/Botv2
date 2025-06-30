@@ -23,7 +23,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
 
   if (event.body.indexOf("Song") == 0 || (event.body.indexOf("Music") == 0)) {
     var msg = {
-      body: `𝗛𝗲𝗹𝗹𝗼 🎵${name}🔊,  \n\n𝗧𝗵𝗶𝘀 𝗶𝘀 𝗙𝗼𝗿 𝘆𝗼𝘂💞 »»\n『\n   ${rand}  』\n\n𝙲𝚛𝚎𝚍𝚒𝚝𝚜»» ◎ 𒁍𝆺𝅥⃝𝗭𝗔𝗜𝗥⃟𝗔🥀💔◎`
+      body: `𝗛𝗲𝗹𝗹𝗼 𝗯𝗮𝗯𝘆🎵${name}🔊,  \n\n𝗧𝗵𝗶𝘀 𝗶𝘀 𝗙𝗼𝗿 𝘆𝗼𝘂💞 »»\n『\n   ${rand}  』\n
     }
     return api.sendMessage(msg, threadID, messageID);
   };
