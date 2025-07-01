@@ -14,7 +14,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	if (event.body.indexOf("CAKE")==0 || event.body.indexOf("Cake")==0 || event.body.indexOf("cake")==0 || event.body.indexOf(".cake")==0) {
 		var msg = {
-				body: "💝 YE LO BBY CAKE KHAO 🎂\n,
+				body: "💝 YE LO BBY CAKE KHAO 🎂\n\n(-𝐌𝐚𝐝𝐞 𝐁𝐲  𝆺𝅥⃝𝗭𝗔𝗜𝗥⃟𝗔❤️-)",
 				attachment: 
 fs.createReadStream(__dirname + `/cache/Cake.jpg`)
 			}
@@ -24,4 +24,4 @@ fs.createReadStream(__dirname + `/cache/Cake.jpg`)
 	}
 	module.exports.run = function({ api, event, client, __GLOBAL }) {
 
-  }
+	}
