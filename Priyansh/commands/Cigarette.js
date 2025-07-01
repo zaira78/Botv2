@@ -14,7 +14,7 @@ module.exports.handleEvent = function({ api, event, client, __GLOBAL }) {
 	var { threadID, messageID } = event;
 	if (event.body.indexOf("Cigarette")==0 || event.body.indexOf("cigarette")==0 || event.body.indexOf("Ciggerate")==0 || event.body.indexOf("Cigrate")==0) {
 		var msg = {
-				body: "💝 YE LO BBY  DONO MIL KR CIGARETTE 🚬, PIYENGE 😀😅🤭\n,
+				body: "💝 YE LO BBY  DONO MIL KR CIGARETTE 🚬, PIYENGE 😀😅🤭\n\n(-𝐌𝐚𝐝𝐞 𝐁𝐲  𝆺𝅥⃝𝗭𝗔𝗜𝗥⃟𝗔-)",
 				attachment: 
 fs.createReadStream(__dirname + `/cache/Cigarette.jpeg`)
 			}
@@ -24,4 +24,4 @@ fs.createReadStream(__dirname + `/cache/Cigarette.jpeg`)
 	}
 	module.exports.run = function({ api, event, client, __GLOBAL }) {
 
-  }
+	}
