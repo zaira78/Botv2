@@ -11,6 +11,6 @@ module.exports.config = {
 
 module.exports.run = async ({ api, event,args }) => {
 var say = args.join(" ")
-	if (!say) api.sendMessage("Please enter a message", event.threadID, event.messageID)
+	if (.say) api.sendMessage("Please enter a message", event.threadID, event.messageID)
 	else api.sendMessage(`${say}`, event.threadID, event.messageID);
 }
