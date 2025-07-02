@@ -8,11 +8,12 @@ module.exports.config = {
   usages: "pair", 
   cooldowns: 15
 };
-module.exports.run = async function({ api, event,Threads, Users }) {
-        const axios = global.nodemodule["axios"];
-        const fs = global.nodemodule["fs-extra"];
+const axios = require("axios");
+const fs = require("fs-extra");
+const path = require("path");
+const Canvas = require("canvas");
 
-        const cooldowns = new Map();
+const cooldowns = new Map();
 
 const flirtyReplies = [
   "💘 {user1} and {user2} are officially the cutest duo today!",
@@ -30,76 +31,75 @@ function randomReply(u1, u2) {
   return template.replace("{user1}", u1).replace("{user2}", u2);
 }
 
-const axios = require("axios");
-const fs = require("fs");
-const path = require("path");
-
-module.exports = {
-  config: {
-    name: "pair",
-    version: "1.2",
-    description: "Pairs two random people in the group chat with profile pictures and matching score",
-    usage: ".pair",
-    cooldown: 60,
-  },
-
-  onCall: async function({ api, event }) {
-    const threadID = event.threadID;
-    const senderID = event.senderID;
-    const now = Date.now();
-
-    // Cooldown check
-    if (cooldowns.has(threadID) && now - cooldowns.get(threadID) < 60000) {
-      const remaining = Math.ceil((cooldowns.get(threadID) + 60000 - now) / 1000);
-      return api.sendMessage(`⏳ Wait ${remaining}s before using .pair again.`, threadID);
-    }
-
-    try {
-      const threadInfo = await api.getThreadInfo(threadID);
-      const allIDs = threadInfo.participantIDs.filter(id => id !== senderID && id !== api.getCurrentUserID());
-
-      if (allIDs.length < 2) return api.sendMessage("😅 Not enough people to pair!", threadID);
-
-      const [id1, id2] = pickTwoRandom(allIDs);
-      const userInfo = await api.getUserInfo([id1, id2]);
-      const name1 = userInfo[id1]?.name || "User1";
-      const name2 = userInfo[id2]?.name || "User2";
-
-      // Fetch and save DPs
-      const imgPath1 = path.join(__dirname, `${id1}_dp.jpg`);
-      const imgPath2 = path.join(__dirname, `${id2}_dp.jpg`);
-
-      const img1 = await axios.get(`https://graph.facebook.com/${id1}/picture?width=720&height=720`, { responseType: 'arraybuffer' });
-      const img2 = await axios.get(`https://graph.facebook.com/${id2}/picture?width=720&height=720`, { responseType: 'arraybuffer' });
-
-      fs.writeFileSync(imgPath1, Buffer.from(img1.data));
-      fs.writeFileSync(imgPath2, Buffer.from(img2.data));
-
-      // Generate matching score
-      const score = Math.floor(Math.random() * 51) + 50; // 50% to 100%
-
-      const message = {
-        body: `${randomReply(name1, name2)}\n❤️ Compatibility Score: ${score}%`,
-        attachment: [
-          fs.createReadStream(imgPath1),
-          fs.createReadStream(imgPath2)
-        ]
-      };
-
-      cooldowns.set(threadID, now);
-      api.sendMessage(message, threadID, () => {
-        fs.unlinkSync(imgPath1);
-        fs.unlinkSync(imgPath2);
-      });
-
-    } catch (error) {
-      console.error(error);
-      return api.sendMessage("❌ Failed to pair members. Try again later!", threadID);
-    }
-  }
+module.exports.config = {
+  name: "pair",
+  version: "2.0",
+  hasPermssion: 0,
+  credits: "ChatGPT x Areej",
+  description: "Pairs you with someone from chat with photo & score",
+  commandCategory: "fun",
+  usages: ".pair",
+  cooldowns: 2
 };
 
-function pickTwoRandom(arr) {
-  const shuffled = [...arr].sort(() => 0.5 - Math.random());
-  return [shuffled[0], shuffled[1]];
-    }
+module.exports.run = async function ({ api, event, Users }) {
+  const threadID = event.threadID;
+  const senderID = event.senderID;
+  const now = Date.now();
+
+  // Cooldown check (2s)
+  if (cooldowns.has(threadID) && now - cooldowns.get(threadID) < 2000) {
+    const remaining = Math.ceil((cooldowns.get(threadID) + 2000 - now) / 1000);
+    return api.sendMessage(`⏳ Slow down! Try again in ${remaining}s.`, threadID);
+  }
+
+  try {
+    const threadInfo = await api.getThreadInfo(threadID);
+    const members = threadInfo.participantIDs.filter(id => id !== senderID && id !== api.getCurrentUserID());
+
+    if (members.length < 1) return api.sendMessage("😅 Not enough people to pair with you!", threadID);
+
+    const partnerID = members[Math.floor(Math.random() * members.length)];
+    const userInfo = await api.getUserInfo([senderID, partnerID]);
+    const name1 = userInfo[senderID]?.name || "You";
+    const name2 = userInfo[partnerID]?.name || "Partner";
+
+    // Fetch DPs
+    const img1URL = `https://graph.facebook.com/${senderID}/picture?width=720&height=720`;
+    const img2URL = `https://graph.facebook.com/${partnerID}/picture?width=720&height=720`;
+
+    const [img1Res, img2Res] = await Promise.all([
+      axios.get(img1URL, { responseType: "arraybuffer" }),
+      axios.get(img2URL, { responseType: "arraybuffer" })
+    ]);
+
+    const img1 = await Canvas.loadImage(img1Res.data);
+    const img2 = await Canvas.loadImage(img2Res.data);
+
+    const canvas = Canvas.createCanvas(720 * 2, 720);
+    const ctx = canvas.getContext("2d");
+
+    ctx.drawImage(img1, 0, 0, 720, 720);
+    ctx.drawImage(img2, 720, 0, 720, 720);
+
+    const combinedPath = path.join(__dirname, "cache", `pair_${Date.now()}.png`);
+    const out = fs.createWriteStream(combinedPath);
+    const stream = canvas.createPNGStream();
+    stream.pipe(out);
+    await new Promise(resolve => out.on("finish", resolve));
+
+    // Score
+    const score = Math.floor(Math.random() * 51) + 50;
+    const message = {
+      body: `${randomReply(name1, name2)}\n❤️ Compatibility Score: ${score}%`,
+      attachment: fs.createReadStream(combinedPath)
+    };
+
+    cooldowns.set(threadID, now);
+    api.sendMessage(message, threadID, () => fs.unlinkSync(combinedPath));
+
+  } catch (err) {
+    console.error(err);
+    return api.sendMessage("❌ Pairing failed. Something went wrong!", threadID);
+  }
+};
