@@ -7,7 +7,7 @@ module.exports.config = {
   description: "goibot",
   commandCategory: "Noprefix",
   usages: "noprefix",
-  cooldowns: 5,
+  cooldowns: 2,
 };
 module.exports.handleEvent = async function({ api, event, args, Threads, Users }) {
   var { threadID, messageID, reason } = event;
@@ -63,7 +63,7 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   ],
 };
 
-const cooldownTimeMs = 10000; // 10 seconds cooldown
+const cooldownTimeMs = 10000; // 2 seconds cooldown
 let lastReplyTime = 0;
 
 // Utility to check if message contains 'bot' (case-insensitive)
