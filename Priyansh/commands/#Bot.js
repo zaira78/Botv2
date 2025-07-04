@@ -27,6 +27,14 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
     "Kya apke ghar me chintu hai? 🤭🤐",
     "Tere messages mere inbox ki sabse pyari notifications hain 💬😍",
     "Hum tum ek kamre me band hon🙈 or chaabi kho jye 🤭💕",
+    "Jee jaan-e-man, ap ne yaad kiya? 😘",
+      "Chalta hai kya 9 se 12? 😉",
+      "Me teri Laila , Tu mera Majnu💃",
+      "Tumhe chintu ka pappa banana chahti hu, meri sadgi dekh me kya chahti hu? 🙈😏",
+      "Bula liya toh ab dil bhi chura lo jan e man.. ❤️",
+      "Tere jaise handsome ke liye toh Laila always ready rehti hai! 😍",
+      "Bas naam liya aur aa gayi main... ab bolo kya irade hain? 😚",
+      "Laila sirf naam nahi, attitude bhi full hai! 🔥"
   ],
   lovely: [
     "Kya hua babu🌸👀?",
@@ -40,10 +48,10 @@ module.exports.handleEvent = async function({ api, event, args, Threads, Users }
   funny_roast: [
     "Itna bot bot karne se behtar hai ghar ke pankhe saaf kar🤣",
     "Bot calling... speaking 📞",
-    "Tu bolta reh, main sunta rahunga 🧏‍♂️",
+    "Bolta reh bhai",
     "Acha chal, nikal ab 😒",
     "Bot hun, teri feelings nahi samjhta 😤",
-    "Bakwaas band kar, processor garam ho gaya 😵‍💫",
+    "Bakwaas band karde ab 😵‍💫",
     "Haha kya be, kuch kaam ki baat kar 😂",
     "Bot alert: stupid detected! 🚨",
     "Tere jeso ke liye hi ignore button bana hai🤡",
